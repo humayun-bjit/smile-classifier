@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Classifier - Classify</title>
+    <link href="{{ url_for('static', path='/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/classify">Classify</a></li>
+                <li><a href="/history">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Classify an Image</h1>
+        
+        <!-- Success Message -->
+        {% if success %}
+        <div class="success" >
+            <p id="success" style="color:green;font-weight:bold;">{{ success }}</p>
+            <p>Prediction: {{ label }}</p>
+        </div>
+        {% endif %}
+
+        <!-- Error Message -->
+        {% if error %}
+        <div class="error">
+            <p>{{ error }}</p>
+        </div>
+        {% endif %}
+
+        <!-- Image upload form -->
+        <form action="/upload/" method="post" enctype="multipart/form-data">
+            <label for="file">Choose an image to classify:</label><br>
+            <input type="file" name="file" id="file" required><br><br>
+            <button type="submit">Upload Image</button>
+        </form>
+    </main>
+</body>
+</html>

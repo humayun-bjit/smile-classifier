@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Classifier - Home</title>
+    
+    <link href="{{ url_for('static', path='/style.css') }}", rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li> <!-- Link to the home route -->
+                <li><a href="/classify">Classify</a></li> <!-- Link to the classify route -->
+                <li><a href="/history">History</a></li> <!-- Link to the history route -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to Smile Classifier</h1>
+        <section>
+            <h2>How It Works</h2>
+            <p>This Smile Classifier model is trained using <strong>TensorFlow</strong> and the <strong>My custom model</strong> model. The model has been fine-tuned for image classification to recognize smiles.</p>
+            <p>We chose TensorFlow because it is a powerful and well-established framework, and my custom model for image recognition tasks.</p>
+        </section>
+    </main>
+</body>
+</html>
